@@ -19,12 +19,14 @@ def generate_emails(base_email, num_emails, campus):
 
 if __name__ == '__main__':
     
-    year = "18"
-    campus = "nc"
+    years = ["18", "19", "20", "21"]
+    campuses = ["nc", "oc"]
     
-    generate_emails('bsef' + year + 'm' , 45, campus)
-    generate_emails('bsef' + year + 'a' , 45, campus)
-    generate_emails('bcsf' + year + 'm' , 45, campus)
-    generate_emails('bcsf' + year + 'a' , 45, campus)
-    generate_emails('bitf' + year + 'm' , 45, campus)
-    generate_emails('bitf' + year + 'a' , 45, campus)
+    for year in years:
+        for campus in campuses:
+            generate_emails('bsef' + year + 'm' , 45, campus)
+            generate_emails('bsef' + year + 'a' , 45, campus)
+            generate_emails('bcsf' + year + 'm' , 45, campus)
+            generate_emails('bcsf' + year + 'a' , 45, campus)
+            generate_emails('bitf' + year + 'm' , 45, campus)
+            generate_emails('bitf' + year + 'a' , 45, campus)
